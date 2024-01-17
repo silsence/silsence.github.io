@@ -1,27 +1,87 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人博客</title>
-    <!-- 可以在这里引入全局CSS样式（如果有的话） -->
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* 页眉 */
+    .header {
+      margin-top: 20px;
+      /* 调整标题与顶部的距离 */
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      /* 调整主标题与副标题的间距 */
+    }
+
+    .header h2 {
+      font-size: 1.5rem;
+      color: #6c757d;
+      margin-bottom: 3rem;
+      /* 副标题与导航栏之间的距离 */
+    }
+
+    .nav-rectangles a {
+      display: inline-block;
+      width: 30%;
+      /* 调整按钮宽度以增大间距 */
+      height: 40px;
+      line-height: 40px;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: #68ac8b;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      margin-right: 10px;
+      /* 按钮之间的间距 */
+    }
+
+    .nav-rectangles a:hover {
+      background-color: #00b3a4;
+    }
+
+    .placeholder-section {
+      background-color: lightgreen;
+      height: 100px;
+      padding: 2rem;
+      color: #fff;
+      font-size: 2.0rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="header bg-dark text-white">
+    <h1>C & K</h1>
+    <h2>* 完全是一个真正的技术术语</h2>
+  </div>
 
-<h1>欢迎来到我的文档库</h1>
+  <div class="nav-rectangles container">
+    <a href="C.html" class="page-link">C语言</a>
+    <a href="QT.html" class="page-link">C++</a>
+    <a href="C++.html" class="page-link">QT</a>
+  </div>
 
-<nav>
-    <ul>
-        <!-- 将下面的链接替换为您实际的HTML文件路径 -->
-        <li><a href="C.html">文章1标题</a></li>
-        <li><a href="QT.html">文章2标题</a></li>
-        <li><a href="C++.html">文章2标题</a></li>
-        <!-- 根据您的需求继续添加更多的页面链接 -->
-    </ul>
-</nav>
-
-<!-- 可以在此处添加更多内容或简介 -->
+  <!-- 根据需要添加更多内容 -->
 
 </body>
-</html>
