@@ -1,18 +1,3 @@
-<!DOCTYPE html><html><head>
-      <title>C</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
-  document.addEventListener("DOMContentLoaded", function () {
-    // your code here
-  });
-</script></head><body for="html-export">
-    
-    
-      <div class="crossnote markdown-preview  ">
-      
 <h1 id="c语言知识点">C语言知识点 </h1>
 <h2 id="知识点一">知识点一 </h2>
 <h3 id="常用数据类型">常用数据类型 </h3>
