@@ -5,83 +5,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-    }
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+  }
 
-    /* 页眉 */
-    .header {
-      margin-top: 20px;
-      /* 调整标题与顶部的距离 */
-    }
+  /* 页眉 */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* 调整标题与顶部的距离 */
+  }
+  
+  .header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* 调整主标题与副标题的间距 */
+  }
 
-    .header h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      /* 调整主标题与副标题的间距 */
-    }
+  .header h2 {
+    font-size: 2rem;
+    color: #6c757d;
+    margin-bottom: 0rem; /* 调整副标题与小标题的间距 */
+  }
 
-    .header h2 {
-      font-size: 1.5rem;
-      color: #6c757d;
-      margin-bottom: 3rem;
-      /* 副标题与导航栏之间的距离 */
-    }
+  .header h3 {
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 3rem; /* 小标题与导航栏之间的距离 */
+    text-align: center;
+  }
 
-    .nav-rectangles a {
-      display: inline-block;
-      width: 30%;
-      /* 调整按钮宽度以增大间距 */
-      height: 40px;
-      line-height: 40px;
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-decoration: none;
-      background-color: #68ac8b;
-      transition: background-color 0.3s ease;
-      text-align: center;
-      margin-right: 10px;
-      /* 按钮之间的间距 */
-    }
+  .nav-rectangles a {
+    display: inline-block;
+    width: 30%; /* 调整按钮宽度以增大间距 */
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #5cc281;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-right: 10px; /* 按钮之间的间距 */
+  }
 
-    .nav-rectangles a:hover {
-      background-color: #00b3a4;
-    }
+  .nav-rectangles a:hover {
+    background-color: #4bc9d6;
+  }
 
-    .placeholder-section {
-      background-color: lightgreen;
-      height: 100px;
-      padding: 2rem;
-      color: #fff;
-      font-size: 2.0rem;
-      text-align: center;
-    }
+  .placeholder-section {
+    background-color: lightgreen;
+    height: 100px;
+    padding: 2rem;
+    color: #fff;
+    font-size: 2.0rem;
+    text-align: center;
+  }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-    }
-  </style>
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+</style>
 </head>
 
 <body>
   <div class="header bg-dark text-white">
     <h1>C & K</h1>
-    <h2>LET THERE BE LIGHT * 完全是一个真正的技术术语</h2>
+    <h2>LET THERE BE LIGHT</h2>
+    <h3>* 完全是一个真正的技术术语</h3>
   </div>
 
   <div class="nav-rectangles container">
     <a href="resources/C.html" class="page-link">C语言</a>
-    <a href="resources/QT.html" class="page-link">C++</a>
-    <a href="resources/C++.html" class="page-link">QT</a>
+    <a href="resources/C++.html" class="page-link">C++</a>
+    <a href="resources/QT.html" class="page-link">QT</a>
   </div>
 
   <!-- 根据需要添加更多内容 -->
 
 </body>
+
+</html>
