@@ -6,74 +6,147 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-  }
+    /* 滑动块 */
+    .scrollable-list {
+      height: 200px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      /* 更改字体样式 */
+    }
 
-  /* 页眉 */
-  .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px; /* 调整标题与顶部的距离 */
-  }
-  
-  .header h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem; /* 调整主标题与副标题的间距 */
-  }
+    .link-item {
+      display: block;
+      margin-bottom: 5px;
+      color: #000;
+      /* 链接文字颜色设为黑色 */
+      text-decoration: none;
+      /* 去除下划线 */
+      transition: color 0.3s ease;
+      /* 添加过渡效果 */
+    }
 
-  .header h2 {
-    font-size: 2rem;
-    color: #6c757d;
-    margin-bottom: 0rem; /* 调整副标题与小标题的间距 */
-  }
+    .link-item:hover {
+      color: #06c;
+      /* 鼠标悬停时链接变为蓝色 */
+    }
 
-  .header h3 {
-    font-size: 1.2rem;
-    color: #999;
-    margin-bottom: 3rem; /* 小标题与导航栏之间的距离 */
-    text-align: center;
-  }
 
-  .nav-rectangles a {
-    display: inline-block;
-    width: 30%; /* 调整按钮宽度以增大间距 */
-    height: 40px;
-    line-height: 40px;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: #5cc281;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    margin-right: 10px; /* 按钮之间的间距 */
-    margin-bottom: 50px;/* 距离底部 */
-  }
 
-  .nav-rectangles a:hover {
-    background-color: #4bc9d6;
-  }
+    /* 网页主体 */
+    body {
+      font-family: Arial, sans-serif;
+      /* 设定整个网页主体的字体为Arial或无衬线字体 */
+      background-color: #f0f0f0;
+      /* 设定背景色为浅灰色 */
+      padding: 20px;
+      /* 整个body的内边距为20像素 */
+      text-align: center;
+      /* 所有文本内容居中对齐 */
+    }
 
-  .placeholder-section {
-    background-color: lightgreen;
-    height: 100px;
-    padding: 2rem;
-    color: #fff;
-    font-size: 2.0rem;
-    text-align: center;
-  }
 
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-  }
-</style>
+
+    /* 页眉 */
+    .header {
+      display: flex;
+      /* 使用弹性布局，让子元素能沿主轴（默认为水平方向）排列 */
+      flex-direction: column;
+      /* 子元素垂直排列 */
+      align-items: center;
+      /* 子元素沿交叉轴居中对齐 */
+      margin-top: 20px;
+      /* 页眉与上方内容的距离为20像素 */
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      /* 调整主标题与副标题的间距 */
+    }
+
+    .header h2 {
+      font-size: 2rem;
+      color: #6c757d;
+      margin-bottom: 0rem;
+      /* 调整副标题与小标题的间距 */
+    }
+
+    .header h3 {
+      font-size: 1.2rem;
+      color: #999;
+      margin-bottom: 3rem;
+      /* 小标题与导航栏之间的距离 */
+      text-align: center;
+    }
+
+
+
+    /* 导航栏样式 */
+    .nav-rectangles a {
+      display: inline-block;
+      /* 使链接（a标签）表现为行内块级元素，可以设置宽高 */
+      width: 30%;
+      /* 导航按钮宽度为父容器宽度的30% */
+      height: 40px;
+      /* 导航按钮高度为40像素 */
+      line-height: 40px;
+      /* 行高与高度一致，使得文字垂直居中 */
+      color: white;
+      /* 字体颜色为白色 */
+      font-size: 1.5rem;
+      /* 字体大小为1.5倍根元素字体大小 */
+      font-weight: bold;
+      /* 加粗字体 */
+      text-decoration: none;
+      /* 去除下划线 */
+      background-color: #5cc281;
+      /* 背景色为绿色 */
+      transition: background-color 0.3s ease;
+      /* 添加背景色过渡动画 */
+      text-align: center;
+      /* 文字居中对齐 */
+      margin-right: 10px;
+      /* 按钮间的左右间距为10像素 */
+      margin-bottom: 50px;
+      /* 按钮与下方内容的距离为50像素 */
+    }
+
+    .nav-rectangles a:hover {
+      background-color: #4bc9d6;
+      /* 当鼠标悬停在按钮上时，背景色变为另一种蓝色 */
+    }
+
+
+
+    /* 占位符区域 */
+    .placeholder-section {
+      background-color: lightgreen;
+      /* 背景色为浅绿色 */
+      height: 100px;
+      /* 高度为100像素 */
+      padding: 2rem;
+      /* 内边距为2倍根元素字体大小 */
+      color: #fff;
+      /* 文字颜色为白色 */
+      font-size: 2.0rem;
+      /* 字体大小为2倍根元素字体大小 */
+      text-align: center;
+      /* 文字居中对齐 */
+    }
+
+
+
+    /* 容器样式 */
+    .container {
+      max-width: 960px;
+      /* 最大宽度为960像素，超过此宽度则自动换行 */
+      margin: 0 auto;
+      /* 上下外边距为0，左右外边距自动计算以使元素居中对齐 */
+    }
+  </style>
 </head>
 
 <body>
@@ -83,6 +156,7 @@
     <h3>* 完全是一个真正的技术术语</h3>
   </div>
 
+  <!-- 导航栏 -->
   <div class="nav-rectangles container">
     <a href="resources/C.html" class="page-link">C语言</a>
     <a href="resources/C++.html" class="page-link">C++</a>
@@ -93,6 +167,22 @@
     <a href="https://github.com/silsence/Raylib-project/README.md" class="page-link">Raylib</a>
     <a href="" class="page-link">Linux</a>
     <a href="" class="page-link">算法</a>
+  </div>
+
+  <!-- 滑块 -->
+  <div class="scrollable-list">
+    <a href="https://silsence.github.io/blog/TCP_Sockek.html" class="link-item">TCP_blog</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
+    <a href="file2.html" class="link-item">文件2</a>
   </div>
   
   <!-- 根据需要添加更多内容 -->
